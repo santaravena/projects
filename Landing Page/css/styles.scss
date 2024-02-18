@@ -1,0 +1,357 @@
+@import "https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+
+}
+
+.container-header {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+    background-color: #fff;
+
+    .logo {
+        img {
+            width: 180px;
+            margin-left: 30px;
+            cursor: pointer;
+        }
+    }
+
+    .nav-bar {
+        ul {
+            display: flex;
+            gap: 80px;
+            margin-right: 30px;
+
+            .nav-link1 {
+                list-style: none;
+                transition: transform 0.3s ease;
+
+                &:hover {
+                    transform: translateY(-5px);
+                }
+
+                a {
+                    text-decoration: none;
+                    color: #000;
+                    font-size: 17px;
+                    font-weight: 500;
+                }
+            }
+        }
+    }
+}
+
+.form {
+    margin-top: 100px;
+
+    form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        .title-form {
+            margin-bottom: 20px;
+            font-weight: 400;
+        }
+
+        #email {
+            border: none;
+            background-color: beige;
+            width: 300px;
+            height: 30px;
+            border-radius: 10px;
+            font-size: 16px;
+            text-align: center;
+        }
+
+        #submit {
+            margin-top: 20px;
+            background-color: #C83A2E;
+            border: none;
+            width: 150px;
+            height: 30px;
+            color: #fff;
+            border-radius: 10px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+
+            &:hover {
+                background-color: #e45b4e;
+            }
+        }
+    }
+}
+
+.caracteristicas {
+    display: grid;
+    grid-template-columns: 55% 1fr 50% 1fr;
+    gap: 10px;
+    width: 100%;
+    overflow: hidden;
+
+    .icons {
+        display: flex;
+        flex-direction: column;
+        margin-top: 80px;
+
+        .icon {
+            display: flex;
+            width: 100%;
+
+            ion-icon {
+                font-size: 80px;
+                color: #C83A2E;
+                margin-left: 80px;
+            }
+
+            .text {
+                margin-left: 30px;
+
+                h3 {
+                    line-height: 40px;
+                }
+            }
+        }
+    }
+
+    .img {
+        img {
+            width: 700px;
+            margin-right: 0;
+            animation: flotar 1.8s infinite alternate
+        }
+    }
+}
+
+.video {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.promociones {
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    margin-top: 80px;
+    width: 70%;
+
+    .promocion1 {
+        border: 1px solid #000;
+        width: 300px;
+
+        .titulo-promo {
+            background-color: beige;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .precio {
+            text-align: center;
+            font-weight: 500;
+            font-size: 18px;
+            padding-top: 20px;
+        }
+
+        .list {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
+
+            .details {
+                line-height: 30px;
+            }
+        }
+
+        .btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 20px auto;
+            background-color: #C83A2E;
+            border: none;
+            width: 150px;
+            height: 30px;
+            color: #fff;
+            border-radius: 10px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            box-shadow: 4px 2px 22px -6px rgba(0, 0, 0, 0.75);
+
+            &:hover {
+                background-color: #e45b4e;
+            }
+        }
+    }
+}
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: beige;
+    margin-top: 30px;
+
+    .terminos {
+        display: flex;
+        gap: 50px;
+        padding-top: 15px;
+
+        ol {
+            cursor: pointer;
+        }
+    }
+
+    .copy {
+        padding-top: 10px;
+        padding-bottom: 15px;
+        font-size: 12px;
+    }
+}
+
+@keyframes flotar {
+    0% {
+        transform: translateY(-15px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .container-header {
+        display: flex;
+        flex-direction: column;
+        .logo {
+            img {
+                margin-left: 0;
+            }
+        }
+        .nav-bar {
+            ul {
+                gap: 40px;
+                margin-right: 0;
+                margin-bottom: 10px;
+            }
+        }
+
+    }
+
+    .form {
+        margin-top: 130px;
+        form {
+            .title-form {
+                text-align: center;
+            }
+
+            #email {
+                width: 250px;
+            }
+
+            #submit {
+                width: 130px;
+            }
+        }
+    }
+
+    .caracteristicas {
+        display: grid;
+        grid-template-columns: 1fr;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+
+        .icons {
+            display: flex;
+            flex-direction: column;
+            margin-top: 80px;
+
+            .icon {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin-bottom: 30px;
+
+                ion-icon {
+                    font-size: 80px;
+                    color: #C83A2E;
+                    display: flex;
+                    margin: auto;
+                    justify-content: center;
+                    align-items: center;
+                }
+
+                .text {
+                    display: flex;
+                    flex-direction: column;
+                    position: relative;
+                    width: 80%;
+                    margin-left: 20px;
+                    margin-right: 20px;
+
+                    h3 {
+                        text-align: center;
+                    }
+
+                    p {
+                        text-align: center;
+                    }
+                }
+            }
+        }
+
+        .img {
+            img {
+                width: 100%;
+                margin-right: 0;
+                animation: none;
+            }
+        }
+    }
+
+    .video {
+        width: 80%;
+        margin: auto;
+    }
+
+    .promociones {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+
+        .promocion1 {
+            width: 90%;
+        }
+    }
+
+    .footer {
+        .terminos {
+            display: none;
+        }
+    }
+}
