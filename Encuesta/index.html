@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encuesta</title>
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+
+<body>
+    <div class="overlay"></div>
+    <div class="container">
+        <h1 id="title">Formulario de inscripción</h1>
+        <p id="description">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        <form id="survey-form">
+            <label class="label-text" id="name-label">Nombre</label>
+            <input class="input-text" type="text" id="name" placeholder="Juan Pérez" required>
+            <label class="label-text" id="email-label">Email</label>
+            <input class="input-text" type="email" id="email" placeholder="ejemplo@dominio.com" required>
+            <label class="label-text" id="number-label">Edad</label>
+            <input class="input-text" type="number" id="number" min="18" max="65" placeholder="25" required>
+            <p class="label-text">Selecciona lugar de destino</p>
+            <select class="input-text" id="dropdown">
+                <option value="chile">Chile</option>
+                <option value="argentina">Argentina</option>
+                <option value="peru">Perú</option>
+            </select>
+            <p class="label-text">Selecciona el medio de pago que utilizarás</p>
+            <label class="label-input"><input type="radio" value="efectivo" name="pago"> Efectivo</label>
+            <label class="label-input"><input type="radio" value="tarjeta" name="pago"> Débito/Crédito</label>
+            <p class="label-text">Selecciona el o los tipos de equipa que utilizarás</p>
+            <label class="label-input"><input type="checkbox" value="mano" name="pago"> Equipaje facturado</label>
+            <label class="label-input"><input type="checkbox" value="maleta" name="pago"> Equipaje de mano</label>
+            <p class="label-text">Utiliza este espacio para consultas</p>
+            <textarea cols="40" rows="10" placeholder="Escribe aquí"></textarea>
+            <button id="submit" type="submit">Enviar</button>
+        </form>
+    </div>
+</body>
+
+</html>
